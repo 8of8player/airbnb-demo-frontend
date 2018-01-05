@@ -12,9 +12,7 @@ import Bottom from "./Bottom";
 
 const Container = styled.div`
   width: 1124px;
-  margin-left: auto;
-  margin-right: auto;
-  background: aliceblue;
+  ${"" /* margin-left: auto; */} ${"" /* margin-right: auto; */} ${"" /* background: aliceblue; */};
 `;
 
 class App extends Component {
