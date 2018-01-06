@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
-import { CircularBold, CircularBook, CircularLight, Wrapper } from "../styled";
 import {
   DivFlex,
   Content,
@@ -9,7 +8,7 @@ import {
   CaptionBox,
   Image,
   Link,
-  Rating
+  WrapperHorizont
 } from "../styled";
 import paris from "./Paris.png";
 import miami from "./Miami.png";
@@ -19,7 +18,9 @@ import seoul from "./Seoul.png";
 import losAngeles from "./LosAngeles.png";
 import ButtonNext from "../Slider/ButtonNext";
 
-const City = CircularBold.extend`
+const City = styled.p`
+  margin: 0;
+  font-weight: bold;
   font-size: 12px;
   line-height: 14px;
   margin-top: 4px;
@@ -54,7 +55,7 @@ const ImageFeatured = Image.extend`
 
 const ButtonBox = styled.div`
   position: absolute;
-  top: 45%;
+  top: 50%;
   right: 0;
   display: none;
 
@@ -70,44 +71,44 @@ export default () => {
         <Caption> Featured destinations </Caption>
       </CaptionBox>
       <Row>
-        <Wrapper>
+        <WrapperHorizont>
           <Col xs={4} md={3} lg={2}>
-            <Link href="">
+            <Link href="/paris">
               <ImageFeatured src={paris} />
               <City> Paris </City>
             </Link>
           </Col>
           <Col xs={4} md={3} lg={2}>
-            <Link href="">
+            <Link href="/miami">
               <ImageFeatured src={miami} />
               <City> Miami </City>
             </Link>
           </Col>
           <Col xs={4} md={3} lg={2}>
-            <Link href="">
+            <Link href="/tokyo">
               <ImageFeatured src={tokyo} />
               <City> Tokyo </City>
             </Link>
           </Col>
           <Col xs={4} md={3} lg={2}>
-            <Link href="">
+            <Link href="/capetown">
               <ImageFeatured src={capeTown} />
               <City> Cape town </City>
             </Link>
           </Col>
           <Col xs={4} md={3} lg={2}>
-            <Link href="">
+            <Link href="/seoul">
               <ImageFeatured src={seoul} />
               <City> Seoul </City>
             </Link>
           </Col>
           <Col xs={4} md={3} lg={2}>
-            <Link href="">
+            <Link href="/losangeles">
               <ImageFeatured src={losAngeles} />
               <City> Los Angeles </City>
             </Link>
           </Col>
-        </Wrapper>
+        </WrapperHorizont>
       </Row>
       <ButtonBox>
         <ButtonNext />

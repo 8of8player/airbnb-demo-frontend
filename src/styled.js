@@ -1,27 +1,14 @@
 import styled from "styled-components";
 
-export const CircularBold = styled.p`
-  font-family: Circular;
-  font-weight: bold;
+export const P = styled.p`
   margin: 0;
 `;
 
-export const CircularBook = styled.p`
-  font-family: Circular;
+export const Rating = P.extend`
   font-weight: 600;
-  margin: 0;
-`;
-
-export const Rating = CircularBook.extend`
   font-size: 12px;
   line-height: 14px;
   margin-left: 8px;
-`;
-
-export const CircularLight = styled.p`
-  font-family: Circular;
-  font-weight: lighter;
-  margin: 0;
 `;
 
 export const Image = styled.img`
@@ -54,7 +41,7 @@ export const DivFlex = styled.div`
   display: flex;
 `;
 
-export const Wrapper = DivFlex.extend`
+export const WrapperHorizont = DivFlex.extend`
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;

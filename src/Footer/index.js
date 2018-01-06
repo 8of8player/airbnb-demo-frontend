@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
-import { CircularBold, CircularBook, CircularLight } from "../styled";
 import { DivFlex, Content, Link } from "../styled";
 import pageDown from "./pageDown.png";
 
@@ -52,7 +51,9 @@ const Select = styled.select`
   }
 `;
 
-const ColumnTitle = CircularBold.extend`
+const ColumnTitle = styled.p`
+  margin: 0;
+  font-weight: bold;
   font-size: 12px;
   line-height: 14px;
   margin-bottom: 19px;
@@ -66,7 +67,9 @@ const ColumnTitle = CircularBold.extend`
 
 const Option = styled.option``;
 
-const ColumnSection = CircularBook.extend`
+const ColumnSection = styled.p`
+  margin: 0;
+  font-weight: 600;
   font-size: 12px;
   line-height: 14px;
   margin-bottom: 11px;
@@ -86,14 +89,6 @@ const Column = styled.div`
   }
 `;
 
-// const SelectsHorizontal = DivFlex.extend`
-//   width: 100%;
-
-//   @media (min-width: 768px) {
-//     display: none;
-//   }
-// `;
-
 const SelectsHorizontal = DivFlex.extend`
   width: 100%;
 
@@ -103,14 +98,6 @@ const SelectsHorizontal = DivFlex.extend`
     height: fit-content;
   }
 `;
-
-// const SelectsVertical = styled.div`
-//   display: none;
-
-//   @media (min-width: 768px) {
-//     display: block;
-//   }
-// `;
 
 export default () => {
   return (
@@ -128,18 +115,6 @@ export default () => {
             </Select>
           </Col>
         </SelectsHorizontal>
-        {/* <Col md={3}>
-          <SelectsVertical>
-            <Select name="country">
-              <Option value="English"> English </Option>
-              <Option value="notEnglish"> not English </Option>
-            </Select>
-            <Select name="country">
-              <Option value="USD">United States dollar</Option>
-              <Option value="notUSD"> not United States dollar </Option>
-            </Select>
-          </SelectsVertical>
-        </Col> */}
         <Col md={1} />
         <Col md={3}>
           <Column>

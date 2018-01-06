@@ -1,21 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
-import { CircularBold, CircularBook, CircularLight, Wrapper } from "../styled";
+// import { CircularBold, CircularBook, CircularLight} from "../styled";
 import {
-  DivFlex,
+  P,
   Content,
   Caption,
   CaptionBox,
+  WrapperHorizont,
   Image,
   Link,
   Fame,
   Rating
 } from "../styled";
 import FiveStars from "../Stars/FiveStars";
-import HomeOne from "./1.png";
-import HomeTwo from "./2.png";
-import HomeThree from "./3.png";
+import homeOne from "./1.png";
+import homeTwo from "./2.png";
+import homeThree from "./3.png";
 import ButtonNext from "../Slider/ButtonNext";
 import SeaAll from "../SeeAll/";
 
@@ -29,7 +30,8 @@ const ImageHomes = Image.extend`
   }
 `;
 
-const Descr = CircularBold.extend`
+const Descr = P.extend`
+  font-weight: bold;
   color: #383838;
   font-size: 13px;
   line-height: 15px;
@@ -41,7 +43,8 @@ const Descr = CircularBold.extend`
   }
 `;
 
-const Type = CircularLight.extend`
+const Type = P.extend`
+  font-weight: ligher;
   color: #383838;
   font-size: 12px;
   line-height: 14px;
@@ -56,7 +59,7 @@ const Type = CircularLight.extend`
 
 const ButtonBox = styled.div`
   position: absolute;
-  top: 45%;
+  top: 40%;
   right: 0;
   display: none;
 
@@ -75,10 +78,10 @@ export default () => {
         </Link>
       </CaptionBox>
       <Row>
-        <Wrapper>
+        <WrapperHorizont>
           <Col xs={8} md={5} lg={4}>
             <Link href="/homeone">
-              <ImageHomes src={HomeOne} />
+              <ImageHomes src={homeOne} />
               <Descr> $82 La Salentina, see, nature & relax </Descr>
               <Type> Entire house · 9 beds </Type>
               <Fame>
@@ -89,7 +92,7 @@ export default () => {
           </Col>
           <Col xs={8} md={5} lg={4}>
             <Link href="/hometwo">
-              <ImageHomes src={HomeTwo} />
+              <ImageHomes src={homeTwo} />
               <Descr> $82 Your private 3 bedr. riad and exclusi… </Descr>
               <Type> Entire house · 5 beds </Type>
               <Fame>
@@ -100,7 +103,7 @@ export default () => {
           </Col>
           <Col xs={8} md={5} lg={4}>
             <Link href="/homethree">
-              <ImageHomes src={HomeThree} />
+              <ImageHomes src={homeThree} />
               <Descr> $200 Dreamy Tropical Tree House </Descr>
               <Type> Entire house · 1 bed </Type>
               <Fame>
@@ -109,7 +112,7 @@ export default () => {
               </Fame>
             </Link>
           </Col>
-        </Wrapper>
+        </WrapperHorizont>
       </Row>
       <ButtonBox>
         <ButtonNext />

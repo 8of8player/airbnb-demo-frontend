@@ -1,15 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
-import { CircularBold, CircularBook, CircularLight, Wrapper } from "../styled";
 import {
-  DivFlex,
+  P,
   Content,
   Caption,
   CaptionBox,
   Image,
   Link,
-  Rating
+  WrapperHorizont
 } from "../styled";
 import chumleys from "./Chumleys.png";
 import hanjan from "./Hanjan.png";
@@ -18,7 +17,8 @@ import seaprice from "./Seaprice.png";
 import ButtonNext from "../Slider/ButtonNext";
 import SeaAll from "../SeeAll/";
 
-const Type = CircularBold.extend`
+const Type = P.extend`
+  font-weight: bold;
   font-size: 8px;
   line-height: 9px;
   margin-top: 7px;
@@ -29,7 +29,8 @@ const Type = CircularBold.extend`
   }
 `;
 
-const Name = CircularBold.extend`
+const Name = P.extend`
+  font-weight: bold;
   font-size: 14px;
   line-height: 16px;
   margin-top: 2px;
@@ -39,7 +40,8 @@ const Name = CircularBold.extend`
   }
 `;
 
-const Price = CircularLight.extend`
+const Price = P.extend`
+  font-weight: lighter;
   font-size: 12px;
   line-height: 14px;
   margin-top: 4px;
@@ -65,7 +67,7 @@ const ImagePopular = Image.extend`
 
 const ButtonBox = styled.div`
   position: absolute;
-  top: 45%;
+  top: 40%;
   right: 0;
   display: none;
 
@@ -78,13 +80,15 @@ export default () => {
   return (
     <Content>
       <CaptionBox>
-        <Caption> Popular reservations around the world </Caption>
-        <SeaAll />
+        <Caption>Popular reservations around the world</Caption>
+        <Link href="/popularall">
+          <SeaAll />
+        </Link>
       </CaptionBox>
       <Row>
-        <Wrapper>
+        <WrapperHorizont>
           <Col xs={6} md={4} lg={3}>
-            <Link href="">
+            <Link href="/chumleys">
               <ImagePopular src={chumleys} />
               <Type> SPEAKEASY </Type>
               <Name> Chumley's </Name>
@@ -92,15 +96,15 @@ export default () => {
             </Link>
           </Col>
           <Col xs={6} md={4} lg={3}>
-            <Link href="">
+            <Link href="/hanjan">
               <ImagePopular src={hanjan} />
               <Type> KOREAN GASTROPUB </Type>
-              <Name> Hanjan's </Name>
+              <Name> Hanjan </Name>
               <Price> About $50 per person </Price>
             </Link>
           </Col>
           <Col xs={6} md={4} lg={3}>
-            <Link href="">
+            <Link href="/primemeats">
               <ImagePopular src={primeMeats} />
               <Type> GERMAN AMERICAN </Type>
               <Name> Prime Meats </Name>
@@ -108,14 +112,14 @@ export default () => {
             </Link>
           </Col>
           <Col xs={6} md={4} lg={3}>
-            <Link href="">
+            <Link href="seaprice">
               <ImagePopular src={seaprice} />
               <Type> FINE SEAFODD </Type>
-              <Name> Seaprice's </Name>
+              <Name> Seaprice </Name>
               <Price> About $70 per person </Price>
             </Link>
           </Col>
-        </Wrapper>
+        </WrapperHorizont>
       </Row>
       <ButtonBox>
         <ButtonNext />

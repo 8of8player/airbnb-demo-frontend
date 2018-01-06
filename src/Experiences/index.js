@@ -1,20 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
-import { CircularBold, CircularBook, CircularLight, Wrapper } from "../styled";
 import {
   Content,
+  P,
   Caption,
   CaptionBox,
+  WrapperHorizont,
   Image,
   Link,
   Rating,
   Fame
 } from "../styled";
-import Forest from "./ForestTherapy.png";
-import WhaleWatching from "./WhaleWatching.png";
-import TableMountain from "./TableMountain.png";
-import SalsaNight from "./SalsaNight.png";
+import forest from "./ForestTherapy.png";
+import whaleWatching from "./WhaleWatching.png";
+import tableMountain from "./TableMountain.png";
+import salsaNight from "./SalsaNight.png";
 import FiveStars from "../Stars/FiveStars";
 import ButtonNext from "../Slider/ButtonNext";
 import SeaAll from "../SeeAll/";
@@ -30,7 +31,8 @@ const ButtonBox = styled.div`
   }
 `;
 
-const PlaceName = CircularLight.extend`
+const PlaceName = P.extend`
+  font-weight: lighter;
   font-size: 13px;
   line-height: 15px;
   margin-top: 8px;
@@ -64,10 +66,10 @@ export default () => {
         </Link>
       </CaptionBox>
       <Row>
-        <Wrapper>
+        <WrapperHorizont>
           <Col xs={6} md={4} lg={3}>
             <Link href="/forest">
-              <ImageExpr src={Forest} />
+              <ImageExpr src={forest} />
               <PlaceName>
                 <b>$29</b> Forest therapy
               </PlaceName>
@@ -79,7 +81,7 @@ export default () => {
           </Col>
           <Col xs={6} md={4} lg={3}>
             <Link href="/whalewatching">
-              <ImageExpr src={WhaleWatching} />
+              <ImageExpr src={whaleWatching} />
               <PlaceName>
                 <b>$69</b> Whale watching
               </PlaceName>
@@ -91,7 +93,7 @@ export default () => {
           </Col>
           <Col xs={6} md={4} lg={3}>
             <Link href="/tablemountain">
-              <ImageExpr src={TableMountain} />
+              <ImageExpr src={tableMountain} />
               <PlaceName>
                 <b>$69</b> Table Mountain Summit, Cable Car Down
               </PlaceName>
@@ -103,7 +105,7 @@ export default () => {
           </Col>
           <Col xs={6} md={4} lg={3}>
             <Link href="/salsanight">
-              <ImageExpr src={SalsaNight} />
+              <ImageExpr src={salsaNight} />
               <PlaceName>
                 <b>$50</b> SalsaNight
               </PlaceName>
@@ -113,7 +115,7 @@ export default () => {
               </Fame>
             </Link>
           </Col>
-        </Wrapper>
+        </WrapperHorizont>
       </Row>
       <ButtonBox>
         <ButtonNext />

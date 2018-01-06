@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
-import { CircularBold, CircularBook, CircularLight } from "../styled";
-import { Content, Image, Link, DivFlex } from "../styled";
+import { Content, P, Image, Link, DivFlex } from "../styled";
 import logo from "./logo.png";
 import search from "./search.png";
 import pageDown from "./pageDown.png";
@@ -66,7 +65,8 @@ const MenuMain = DivFlex.extend`
   }
 `;
 
-const Option = CircularBook.extend`
+const Option = P.extend`
+  font-weight: 600;
   font-size: 14px;
   line-height: 24px;
   color: #383838;

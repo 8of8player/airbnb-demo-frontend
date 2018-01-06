@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
-import { CircularBold, CircularBook, CircularLight } from "../styled";
-import { DivFlex, Image, Link, Content } from "../styled";
+import { DivFlex, Image, Link, P } from "../styled";
 import logo from "./logo.png";
 import facebook from "./facebook.svg";
 import twitter from "./twitter.svg";
@@ -15,6 +14,7 @@ const BottomContent = styled.div`
   border-top: 1px solid rgba(72, 72, 72, 0.3);
   @media (min-width: 768px) {
     padding-top: 0;
+    padding-bottom: 42px;
     margin-right: 8px;
   }
 
@@ -48,7 +48,8 @@ const RulesAndShare = DivFlex.extend`
   }
 `;
 
-const Rights = CircularBook.extend`
+const Rights = P.extend`
+  font-weight: 600;
   font-size: 12px;
   line-height: 14px;
   margin-left: 8px;
@@ -63,7 +64,8 @@ const Rights = CircularBook.extend`
   }
 `;
 
-const Rule = CircularBook.extend`
+const Rule = P.extend`
+  font-weight: 600;
   font-size: 12px;
   line-height: 14px;
   margin-right: 12px;

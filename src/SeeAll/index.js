@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { CircularBold, CircularBook, CircularLight } from "../styled";
-import { Image, DivFlex } from "../styled";
+// import { CircularBold, CircularBook, CircularLight } from "../styled";
+import { Image, DivFlex, P } from "../styled";
 import arrowRight from "./pageRightLink.png";
 
-const Descr = CircularBook.extend`
+// const Descr = CircularBook.extend`
+const Descr = P.extend`
+  font-weight: 600;
   font-size: 12px;
   line-height: 24px;
   margin-right: 8px;
-
   @media (min-width: 768px) {
     font-size: 14px;
   }

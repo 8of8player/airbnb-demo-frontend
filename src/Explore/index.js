@@ -1,11 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
-import { CircularBold, CircularBook, CircularLight } from "../styled";
-import { Content, Caption, CaptionBox, Image, Link, Wrapper } from "../styled";
-import Homes from "./Homes.png";
-import Experiences from "./Experiences.png";
-import Restaurants from "./Restaurants.png";
+import {
+  Content,
+  P,
+  Caption,
+  CaptionBox,
+  Image,
+  Link,
+  WrapperHorizont
+} from "../styled";
+import homes from "./Homes.png";
+import experiences from "./Experiences.png";
+import restaurants from "./Restaurants.png";
 
 const Card = styled.div`
   border: 0.4px solid rgba(72, 72, 72, 0.2);
@@ -17,7 +24,8 @@ const Card = styled.div`
   }
 `;
 
-const Descr = CircularBold.extend`
+const Type = P.extend`
+  font-weight: bold;
   font-size: 12px;
   line-height: 14px;
   color: #383838;
@@ -29,12 +37,13 @@ const Descr = CircularBold.extend`
     padding: 0;
     margin-left: 24px;
     font-size: 17px;
+    line-height: 20px;
   }
 `;
 
 const ImageExplore = Image.extend`
   width: 144px;
-  height: 78px;
+  height: auto;
 
   @media (min-width: 768px) {
     width: 96px;
@@ -49,32 +58,32 @@ export default () => {
         <Caption> Explore Airbnb </Caption>
       </CaptionBox>
       <Row>
-        <Wrapper>
+        <WrapperHorizont>
           <Col xs={6} md={5} lg={4}>
             <Link href="/homes">
               <Card>
-                <ImageExplore src={Homes} />
-                <Descr> Homes </Descr>
+                <ImageExplore src={homes} />
+                <Type> Homes </Type>
               </Card>
             </Link>
           </Col>
           <Col xs={6} md={5} lg={4}>
             <Link href="/experiences">
               <Card>
-                <ImageExplore src={Experiences} />
-                <Descr> Experiences </Descr>
+                <ImageExplore src={experiences} />
+                <Type> Experiences </Type>
               </Card>
             </Link>
           </Col>
           <Col xs={6} md={5} lg={4}>
             <Link href="/restaurants">
               <Card>
-                <ImageExplore src={Restaurants} />
-                <Descr> Restaurants </Descr>
+                <ImageExplore src={restaurants} />
+                <Type> Restaurants </Type>
               </Card>
             </Link>
           </Col>
-        </Wrapper>
+        </WrapperHorizont>
       </Row>
     </Content>
   );
