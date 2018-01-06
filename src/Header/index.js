@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
 import { CircularBold, CircularBook, CircularLight } from "../styled";
-import { Content, Image, Link, Flex } from "../styled";
+import { Content, Image, Link, DivFlex } from "../styled";
 import logo from "./logo.png";
 import search from "./search.png";
 import pageDown from "./pageDown.png";
@@ -37,7 +37,7 @@ const ContentBordered = Content.extend`
   border-bottom: 1px solid rgba(72, 72, 72, 0.3);
 `;
 
-const FlexMid = Flex.extend`
+const DivFlexMid = DivFlex.extend`
   align-items: center;
   width: 100%;
   padding-top: 16px;
@@ -57,7 +57,7 @@ const MenuLogo = styled.div`
   }
 `;
 
-const MenuMain = Flex.extend`
+const MenuMain = DivFlex.extend`
   justify-content: space-between;
   display: none;
 
@@ -76,7 +76,7 @@ export default () => {
   return (
     <ContentBordered>
       <Row>
-        <FlexMid>
+        <DivFlexMid>
           <Col xs={2} md={1}>
             <Link href="/home">
               <Image src={logo} />
@@ -107,7 +107,7 @@ export default () => {
               </Option>
             </MenuMain>
           </Col>
-        </FlexMid>
+        </DivFlexMid>
       </Row>
     </ContentBordered>
   );

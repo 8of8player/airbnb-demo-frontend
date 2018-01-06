@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import styled from "styled-components";
+import { Grid } from "react-flexbox-grid";
 import Header from "./Header/";
 import Explore from "./Explore";
 import Experiences from "./Experiences";
@@ -34,6 +35,8 @@ class App extends Component {
           <Explore />
           <Experiences />
           <Homes />
+          <Popular />
+          <Featured />
           <Footer />
           <Bottom />
         </Container>

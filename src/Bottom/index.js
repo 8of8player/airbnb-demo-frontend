@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
 import { CircularBold, CircularBook, CircularLight } from "../styled";
-import { Flex, Image, Link, Content } from "../styled";
+import { DivFlex, Image, Link, Content } from "../styled";
 import logo from "./logo.png";
-import Facebook from "./facebook.png";
-import Twitter from "./twitter.png";
-import Instagram from "./instagram.png";
+import facebook from "./facebook.svg";
+import twitter from "./twitter.svg";
+import instagram from "./instagram.svg";
 
 const BottomContent = styled.div`
   padding-top: 16px;
@@ -24,7 +24,7 @@ const BottomContent = styled.div`
   }
 `;
 
-const Copyright = Flex.extend`
+const Copyright = DivFlex.extend`
   align-items: center;
 
   @media (min-width: 768px) {
@@ -32,7 +32,7 @@ const Copyright = Flex.extend`
   }
 `;
 
-const RulesAndShare = Flex.extend`
+const RulesAndShare = DivFlex.extend`
   align-items: center;
   margin-top: 11px;
 
@@ -63,7 +63,7 @@ const Rights = CircularBook.extend`
   }
 `;
 
-const NoName = CircularBook.extend`
+const Rule = CircularBook.extend`
   font-size: 12px;
   line-height: 14px;
   margin-right: 12px;
@@ -78,7 +78,7 @@ const NoName = CircularBook.extend`
   }
 `;
 
-const Images = Image.extend`
+const ImageBottom = Image.extend`
   width: 16px;
   height: 16px;
   margin-right: 8px;
@@ -101,12 +101,24 @@ export default () => {
         </Col>
         <Col xs={12} md={5} lg={4}>
           <RulesAndShare>
-            <NoName> Terms </NoName>
-            <NoName> Privacy </NoName>
-            <NoName> Site map </NoName>
-            <Images src={Facebook} />
-            <Images src={Twitter} />
-            <Images src={Instagram} />
+            <Rule>
+              <Link href="/terms">Terms</Link>
+            </Rule>
+            <Rule>
+              <Link href="/privacy">Privacy</Link>
+            </Rule>
+            <Rule>
+              <Link href="/sitemap">Site map</Link>
+            </Rule>
+            <Link href="/facebook">
+              <ImageBottom src={facebook} />
+            </Link>
+            <Link href="/twitter">
+              <ImageBottom src={twitter} />
+            </Link>
+            <Link href="/instagram">
+              <ImageBottom src={instagram} />
+            </Link>
           </RulesAndShare>
         </Col>
       </Row>

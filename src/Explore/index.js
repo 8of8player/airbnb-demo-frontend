@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
 import { CircularBold, CircularBook, CircularLight } from "../styled";
-import { Content, CaptionBox, Image, Link, Wrapper } from "../styled";
+import { Content, Caption, CaptionBox, Image, Link, Wrapper } from "../styled";
 import Homes from "./Homes.png";
 import Experiences from "./Experiences.png";
 import Restaurants from "./Restaurants.png";
@@ -45,7 +45,9 @@ const ImageExplore = Image.extend`
 export default () => {
   return (
     <Content>
-      <CaptionBox> Explore Airbnb </CaptionBox>
+      <CaptionBox>
+        <Caption> Explore Airbnb </Caption>
+      </CaptionBox>
       <Row>
         <Wrapper>
           <Col xs={6} md={5} lg={4}>

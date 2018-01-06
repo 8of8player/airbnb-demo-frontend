@@ -2,14 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
 import { CircularBold, CircularBook, CircularLight, Wrapper } from "../styled";
-import { Content, CaptionBox, Image, Link, Rating, Fame } from "../styled";
+import {
+  Content,
+  Caption,
+  CaptionBox,
+  Image,
+  Link,
+  Rating,
+  Fame
+} from "../styled";
 import Forest from "./ForestTherapy.png";
 import WhaleWatching from "./WhaleWatching.png";
 import TableMountain from "./TableMountain.png";
 import SalsaNight from "./SalsaNight.png";
-import FiveStars from "../FiveStars";
-import ButtonNext from "../ButtonNext";
-import SeaAll from "../SeeAll";
+import FiveStars from "../Stars/FiveStars";
+import ButtonNext from "../Slider/ButtonNext";
+import SeaAll from "../SeeAll/";
 
 const ButtonBox = styled.div`
   position: absolute;
@@ -50,7 +58,7 @@ export default () => {
   return (
     <Content>
       <CaptionBox>
-        Experiences
+        <Caption> Experiences </Caption>
         <Link href="/experiencesall">
           <SeaAll />
         </Link>

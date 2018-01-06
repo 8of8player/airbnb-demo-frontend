@@ -3,20 +3,21 @@ import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
 import { CircularBold, CircularBook, CircularLight, Wrapper } from "../styled";
 import {
-  Flex,
+  DivFlex,
   Content,
+  Caption,
   CaptionBox,
   Image,
   Link,
   Fame,
   Rating
 } from "../styled";
-import FiveStars from "../FiveStars";
+import FiveStars from "../Stars/FiveStars";
 import HomeOne from "./1.png";
 import HomeTwo from "./2.png";
 import HomeThree from "./3.png";
-import ButtonNext from "../ButtonNext";
-import SeaAll from "../SeeAll";
+import ButtonNext from "../Slider/ButtonNext";
+import SeaAll from "../SeeAll/";
 
 const ImageHomes = Image.extend`
   width: 197px;
@@ -68,7 +69,7 @@ export default () => {
   return (
     <Content>
       <CaptionBox>
-        Homes
+        <Caption> Homes </Caption>
         <Link href="/homesall">
           <SeaAll />
         </Link>

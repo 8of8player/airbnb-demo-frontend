@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
 import { CircularBold, CircularBook, CircularLight } from "../styled";
-import { Flex, Content, Link } from "../styled";
+import { DivFlex, Content, Link } from "../styled";
 import pageDown from "./pageDown.png";
 
 const FooterContent = Content.extend`
@@ -86,21 +86,31 @@ const Column = styled.div`
   }
 `;
 
-const SelectsHorizontal = Flex.extend`
+// const SelectsHorizontal = DivFlex.extend`
+//   width: 100%;
+
+//   @media (min-width: 768px) {
+//     display: none;
+//   }
+// `;
+
+const SelectsHorizontal = DivFlex.extend`
   width: 100%;
 
   @media (min-width: 768px) {
-    display: none;
+    flex-basis: 24.99%;
+    flex-wrap: wrap;
+    height: fit-content;
   }
 `;
 
-const SelectsVertical = styled.div`
-  display: none;
+// const SelectsVertical = styled.div`
+//   display: none;
 
-  @media (min-width: 768px) {
-    display: block;
-  }
-`;
+//   @media (min-width: 768px) {
+//     display: block;
+//   }
+// `;
 
 export default () => {
   return (
@@ -110,17 +120,15 @@ export default () => {
           <Col xs={6} md={12}>
             <Select name="country">
               <Option value="English"> English </Option>
-              <Option value="notEnglish"> not English </Option>
             </Select>
           </Col>
           <Col xs={6} md={12}>
             <Select name="country">
               <Option value="USD">United States dollar</Option>
-              <Option value="notUSD"> not United States dollar </Option>
             </Select>
           </Col>
         </SelectsHorizontal>
-        <Col md={3}>
+        {/* <Col md={3}>
           <SelectsVertical>
             <Select name="country">
               <Option value="English"> English </Option>
@@ -131,7 +139,7 @@ export default () => {
               <Option value="notUSD"> not United States dollar </Option>
             </Select>
           </SelectsVertical>
-        </Col>
+        </Col> */}
         <Col md={1} />
         <Col md={3}>
           <Column>

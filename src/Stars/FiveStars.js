@@ -2,7 +2,7 @@ import React from "react";
 import Star from "./Star";
 import styled from "styled-components";
 
-const Flex = styled.div`
+const DivFlex = styled.div`
   display: flex;
   margin-left: -2px;
   margin-right: -2px;
@@ -10,12 +10,12 @@ const Flex = styled.div`
 
 export default () => {
   return (
-    <Flex>
+    <DivFlex>
       <Star />
       <Star />
       <Star />
       <Star />
       <Star />
-    </Flex>
+    </DivFlex>
   );
 };
