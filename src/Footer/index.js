@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Col } from "react-flexbox-grid";
+import { Row, Col } from "react-flexbox-grid";
 import { CircularBold, CircularBook, CircularLight } from "../styled";
-import { Flex, Content, Row, Caption, Image, Link, Reviews } from "../styled";
+import { Flex, Content, CaptionBox, Image, Link, Rating } from "../styled";
 
 const Block = Content.extend`
   padding-top: 48px;

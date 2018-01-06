@@ -1,23 +1,27 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
+  background: aliceblue;
 }
 
 @font-face {
-  font-family: CircularBold;
+  font-family: Circular;
   src: url("./fonts/Circular/Circular_Air-Bold.woff") format("woff"),
     url("./fonts/Circular/Circular_Air-Bold.ttf") format("truetype");
+  font-weight: bold;
 }
 
 @font-face {
-  font-family: CircularBook;
+  font-family: Circular;
   src: url("./fonts/Circular/Circular_Air-Book.woff") format("woff"),
     url("./fonts/Circular/Circular_Air-Book.ttf") format("truetype");
+  font-weight: 600;
 }
 
 @font-face {
-  font-family: CircularLight;
+  font-family: Circular;
   src: url("./fonts/Circular/Circular_Air-Light.woff") format("woff"),
     url("./fonts/Circular/Circular_Air-Light.ttf") format("truetype");
+  font-weight: lighter;
 }

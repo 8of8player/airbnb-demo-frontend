@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Col } from "react-flexbox-grid";
+import { Row, Col } from "react-flexbox-grid";
 import { CircularBold, CircularBook, CircularLight } from "../styled";
-import { Flex, Content, Row, Caption, Image, Link, Reviews } from "../styled";
+import { Flex, Content, CaptionBox, Image, Link, Rating } from "../styled";
 import FiveStars from "../FiveStars";
 import HomeOne from "./1.png";
 import HomeTwo from "./2.png";
@@ -34,7 +34,7 @@ export default () => {
     <Content>
       <Row>
         <Col lg={11}>
-          <Caption> Homes </Caption>
+          <CaptionBox> Homes </CaptionBox>
         </Col>
         <Col lg={1}>
           <Link href="homes-nextpage">
@@ -48,7 +48,7 @@ export default () => {
             <Type> Entire house · 9 beds </Type>
             <Flex>
               <FiveStars />
-              <Reviews> 97 · Superhost </Reviews>
+              <Rating> 97 · Superhost </Rating>
             </Flex>
           </Link>
         </Col>
@@ -59,7 +59,7 @@ export default () => {
             <Type> Entire house · 5 beds </Type>
             <Flex>
               <FiveStars />
-              <Reviews> 161 · Superhost </Reviews>
+              <Rating> 161 · Superhost </Rating>
             </Flex>
           </Link>
         </Col>
@@ -70,7 +70,7 @@ export default () => {
             <Type> Entire house · 1 bed </Type>
             <Flex>
               <FiveStars />
-              <Reviews> 364 · Superhost </Reviews>
+              <Rating> 364 · Superhost </Rating>
             </Flex>
           </Link>
         </Col>

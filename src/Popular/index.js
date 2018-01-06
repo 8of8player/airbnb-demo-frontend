@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Col } from "react-flexbox-grid";
+import { Row, Col } from "react-flexbox-grid";
 import { CircularBold, CircularBook, CircularLight } from "../styled";
-import { Flex, Content, Row, Caption, Image, Link, Reviews } from "../styled";
+import { Flex, Content, CaptionBox, Image, Link, Rating } from "../styled";
 import Chumleys from "./Chumleys.png";
 import Hanjan from "./Hanjan.png";
 import PrimeMeats from "./PrimeMeats.png";
@@ -39,7 +39,7 @@ export default () => {
     <Content>
       <Row>
         <Col lg={11}>
-          <Caption> Popular reservations around the world </Caption>
+          <CaptionBox> Popular reservations around the world </CaptionBox>
         </Col>
         <Col lg={1}>
           <Link href="/popular-nextpage">

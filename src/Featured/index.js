@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Col } from "react-flexbox-grid";
+import { Row, Col } from "react-flexbox-grid";
 import { CircularBold, CircularBook, CircularLight } from "../styled";
-import { Flex, Content, Row, Caption, Image, Link, Reviews } from "../styled";
+import { Flex, Content, CaptionBox, Image, Link, Rating } from "../styled";
 import Paris from "./Paris.png";
 import Miami from "./Miami.png";
 import Tokyo from "./Tokyo.png";
@@ -32,7 +32,7 @@ export default () => {
     <Block>
       <Row>
         <Col lg={12}>
-          <Caption> Featured destinations </Caption>
+          <CaptionBox> Featured destinations </CaptionBox>
         </Col>
         <Col lg={2}>
           <Link href="/paris">

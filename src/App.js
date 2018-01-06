@@ -11,8 +11,18 @@ import Footer from "./Footer";
 import Bottom from "./Bottom";
 
 const Container = styled.div`
-  width: 1124px;
-  ${"" /* margin-left: auto; */} ${"" /* margin-right: auto; */} ${"" /* background: aliceblue; */};
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+
+  @media (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media (min-width: 992px) {
+    width: 992px;
+  }
 `;
 
 class App extends Component {
@@ -23,11 +33,6 @@ class App extends Component {
           <Header />
           <Explore />
           <Experiences />
-          <Homes />
-          <Popular />
-          <Featured />
-          <Footer />
-          <Bottom />
         </Container>
       </div>
     );
