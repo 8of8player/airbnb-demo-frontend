@@ -18,7 +18,7 @@ import homeOne from "./1.png";
 import homeTwo from "./2.png";
 import homeThree from "./3.png";
 import ButtonNext from "../Slider/ButtonNext";
-import SeaAll from "../SeeAll/";
+import SeeAll from "../SeeAll/";
 
 const ImageHomes = Image.extend`
   width: 197px;
@@ -74,7 +74,7 @@ export default () => {
       <CaptionBox>
         <Caption> Homes </Caption>
         <Link href="/homesall">
-          <SeaAll />
+          <SeeAll />
         </Link>
       </CaptionBox>
       <Row>
@@ -105,7 +105,7 @@ export default () => {
             <Link href="/homethree">
               <ImageHomes src={homeThree} />
               <Descr> $200 Dreamy Tropical Tree House </Descr>
-              <Type> Entire house · 1 bed </Type>
+              <Type> Entire treehouse · 1 bed </Type>
               <Fame>
                 <FiveStars />
                 <Rating> 364 · Superhost </Rating>

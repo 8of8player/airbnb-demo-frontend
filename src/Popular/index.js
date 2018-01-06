@@ -15,7 +15,7 @@ import hanjan from "./Hanjan.png";
 import primeMeats from "./PrimeMeats.png";
 import seaprice from "./Seaprice.png";
 import ButtonNext from "../Slider/ButtonNext";
-import SeaAll from "../SeeAll/";
+import SeeAll from "../SeeAll/";
 
 const Type = P.extend`
   font-weight: bold;
@@ -76,13 +76,25 @@ const ButtonBox = styled.div`
   }
 `;
 
+const BoxSeeAll = styled.div`
+  position: absolute;
+  top: 18px;
+  right: 5px;
+
+  @media (min-width: 768px) {
+    position: static;
+  }
+`;
+
 export default () => {
   return (
     <Content>
       <CaptionBox>
         <Caption>Popular reservations around the world</Caption>
         <Link href="/popularall">
-          <SeaAll />
+          <BoxSeeAll>
+            <SeeAll />
+          </BoxSeeAll>
         </Link>
       </CaptionBox>
       <Row>
@@ -108,7 +120,7 @@ export default () => {
               <ImagePopular src={primeMeats} />
               <Type> GERMAN AMERICAN </Type>
               <Name> Prime Meats </Name>
-              <Price> About $50 per person </Price>
+              <Price> About $55 per person </Price>
             </Link>
           </Col>
           <Col xs={6} md={4} lg={3}>

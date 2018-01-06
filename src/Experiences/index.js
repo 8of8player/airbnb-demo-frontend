@@ -18,7 +18,7 @@ import tableMountain from "./TableMountain.png";
 import salsaNight from "./SalsaNight.png";
 import FiveStars from "../Stars/FiveStars";
 import ButtonNext from "../Slider/ButtonNext";
-import SeaAll from "../SeeAll/";
+import SeeAll from "../SeeAll/";
 
 const ButtonBox = styled.div`
   position: absolute;
@@ -62,7 +62,7 @@ export default () => {
       <CaptionBox>
         <Caption> Experiences </Caption>
         <Link href="/experiencesall">
-          <SeaAll />
+          <SeeAll />
         </Link>
       </CaptionBox>
       <Row>

@@ -120,6 +120,9 @@ export default () => {
           <Column>
             <ColumnTitle> Airbnb </ColumnTitle>
             <ColumnSection>
+              <Link href="/airbnb">About us</Link>
+            </ColumnSection>
+            <ColumnSection>
               <Link href="/airbnb">Careers</Link>
             </ColumnSection>
             <ColumnSection>
@@ -153,6 +156,9 @@ export default () => {
             </ColumnSection>
             <ColumnSection>
               <Link href="/discover">Business Travel</Link>
+            </ColumnSection>
+            <ColumnSection>
+              <Link href="/discover">Guidebooks </Link>
             </ColumnSection>
             <ColumnSection>
               <Link href="/discover">Airbnbmag</Link>
