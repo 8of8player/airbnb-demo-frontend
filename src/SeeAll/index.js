@@ -6,6 +6,7 @@ import arrowRight from "./pageRightLink.png";
 
 // const Descr = CircularBook.extend`
 const Descr = P.extend`
+  white-space: nowrap;
   font-weight: 600;
   font-size: 12px;
   line-height: 24px;

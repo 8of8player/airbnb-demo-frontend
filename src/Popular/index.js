@@ -86,17 +86,25 @@ const BoxSeeAll = styled.div`
   }
 `;
 
+const CustomCaptionBox = CaptionBox.extend`
+  align-items: center;
+
+  @media (min-width: 768px) {
+    align-items: flex-end;
+  }
+`;
+
 export default () => {
   return (
     <Content>
-      <CaptionBox>
+      <CustomCaptionBox>
         <Caption>Popular reservations around the world</Caption>
         <Link href="/popularall">
           <BoxSeeAll>
             <SeeAll />
           </BoxSeeAll>
         </Link>
-      </CaptionBox>
+      </CustomCaptionBox>
       <Row>
         <WrapperHorizont>
           <Col xs={6} md={4} lg={3}>
