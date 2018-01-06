@@ -33,6 +33,9 @@ class App extends Component {
           <Header />
           <Explore />
           <Experiences />
+          <Homes />
+          <Footer />
+          <Bottom />
         </Container>
       </div>
     );

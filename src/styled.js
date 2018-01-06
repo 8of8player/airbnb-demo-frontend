@@ -55,13 +55,14 @@ export const Flex = styled.div`
 
 export const Wrapper = Flex.extend`
   width: 100%;
-  overflow-x: overflow;
+  overflow-x: auto;
   overflow-y: hidden;
 `;
 
 export const Fame = Flex.extend`
   align-items: center;
   margin-top: 5px;
+  color: #383838;
 
   @media (min-width: 768px) {
     margin-top: 6px;
@@ -76,6 +77,7 @@ export const CaptionBox = Flex.extend`
   font-weight: bold;
   font-size: 24px;
   line-height: 28px;
+  color: #383838;
   @media (min-width: 768px) {
     font-size: 32px;
     line-height: 34px;

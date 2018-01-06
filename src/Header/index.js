@@ -69,6 +69,7 @@ const MenuMain = Flex.extend`
 const Option = CircularBook.extend`
   font-size: 14px;
   line-height: 24px;
+  color: #383838;
 `;
 
 export default () => {

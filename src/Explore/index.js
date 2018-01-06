@@ -13,12 +13,14 @@ const Card = styled.div`
   @media (min-width: 768px) {
     display: flex;
     align-items: center;
+    border: 1px solid rgba(72, 72, 72, 0.2);
   }
 `;
 
 const Descr = CircularBold.extend`
   font-size: 12px;
   line-height: 14px;
+  color: #383838;
   margin-left: 14px;
   padding-top: 13px;
   padding-bottom: 13px;

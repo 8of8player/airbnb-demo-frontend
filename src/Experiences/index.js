@@ -2,15 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
 import { CircularBold, CircularBook, CircularLight, Wrapper } from "../styled";
-import {
-  Flex,
-  Content,
-  CaptionBox,
-  Image,
-  Link,
-  Rating,
-  Fame
-} from "../styled";
+import { Content, CaptionBox, Image, Link, Rating, Fame } from "../styled";
 import Forest from "./ForestTherapy.png";
 import WhaleWatching from "./WhaleWatching.png";
 import TableMountain from "./TableMountain.png";
@@ -59,7 +51,9 @@ export default () => {
     <Content>
       <CaptionBox>
         Experiences
-        <SeaAll />
+        <Link href="/experiencesall">
+          <SeaAll />
+        </Link>
       </CaptionBox>
       <Row>
         <Wrapper>
@@ -76,10 +70,10 @@ export default () => {
             </Link>
           </Col>
           <Col xs={6} md={4} lg={3}>
-            <Link href="/forest">
+            <Link href="/whalewatching">
               <ImageExpr src={WhaleWatching} />
               <PlaceName>
-                <b>$69</b> WhaleWatching
+                <b>$69</b> Whale watching
               </PlaceName>
               <Fame>
                 <FiveStars />
@@ -88,7 +82,7 @@ export default () => {
             </Link>
           </Col>
           <Col xs={6} md={4} lg={3}>
-            <Link href="/forest">
+            <Link href="/tablemountain">
               <ImageExpr src={TableMountain} />
               <PlaceName>
                 <b>$69</b> Table Mountain Summit, Cable Car Down
@@ -100,7 +94,7 @@ export default () => {
             </Link>
           </Col>
           <Col xs={6} md={4} lg={3}>
-            <Link href="/forest">
+            <Link href="/salsanight">
               <ImageExpr src={SalsaNight} />
               <PlaceName>
                 <b>$50</b> SalsaNight

@@ -2,113 +2,198 @@ import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
 import { CircularBold, CircularBook, CircularLight } from "../styled";
-import { Flex, Content, CaptionBox, Image, Link, Rating } from "../styled";
+import { Flex, Content, Link } from "../styled";
+import pageDown from "./pageDown.png";
 
-const Block = Content.extend`
-  padding-top: 48px;
+const FooterContent = Content.extend`
+  padding-top: 16px;
+  padding-bottom: 24px;
+  margin-bottom: 0;
   border-top: 1px solid rgba(72, 72, 72, 0.3);
+
+  @media (min-width: 768px) {
+    padding-top: 48px;
+    padding-bottom: 38px;
+  }
+
+  @media (min-width: 992px) {
+    padding-bottom: 48px;
+  }
 `;
 
 const Select = styled.select`
   width: 100%;
-  margin-bottom: 16px;
-  font-family: CircularLight;
-  font-size: 18px;
-  line-height: 21px;
-  padding-top: 12px;
-  padding-bottom: 13px;
-  padding-left: 16px;
+  font-family: Circular;
+  font-weight: lighter;
+  font-size: 12px;
+  line-height: 14px;
+  color: #383838;
+  padding: 12px 0 12px 8px;
   appearance: none;
-  background: url("https://i.imgur.com/BPKsuU3.png");
-  background-position: 197px 50%;
+  background: url(${pageDown});
+  background-size: 12px 7px;
+  background-position: 94% 50%;
   background-repeat: no-repeat;
   background-color: white;
+  border: 1px solid rgba(72, 72, 72, 0.2);
+  border-radius: 4px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 14px 0 15px 8px;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 18px;
+    line-height: 21px;
+    padding: 12px 0 13px 16px;
+  }
 `;
 
-const Section = CircularBold.extend`
-  font-size: 15px;
-  line-height: 18px;
-  margin-bottom: 16px;
+const ColumnTitle = CircularBold.extend`
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 19px;
+
+  @media (min-width: 992px) {
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 16px;
+  }
 `;
 
 const Option = styled.option``;
 
-const Point = CircularBook.extend`
-  font-size: 15px;
-  line-height: 18px;
-  margin-bottom: 8px;
+const ColumnSection = CircularBook.extend`
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 11px;
+
+  @media (min-width: 992px) {
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 8px;
+  }
+`;
+
+const Column = styled.div`
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+`;
+
+const SelectsHorizontal = Flex.extend`
+  width: 100%;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const SelectsVertical = styled.div`
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
 `;
 
 export default () => {
   return (
-    <Block>
+    <FooterContent>
       <Row>
-        <Col lg={3}>
-          <Select name="country">
-            <Option value="English"> English </Option>
-            <Option value="notEnglish"> not English </Option>
-          </Select>
-          <Select name="country">
-            <Option value="USD">United States dollar</Option>
-            <Option value="notUSD"> not United States dollar </Option>
-          </Select>
+        <SelectsHorizontal>
+          <Col xs={6} md={12}>
+            <Select name="country">
+              <Option value="English"> English </Option>
+              <Option value="notEnglish"> not English </Option>
+            </Select>
+          </Col>
+          <Col xs={6} md={12}>
+            <Select name="country">
+              <Option value="USD">United States dollar</Option>
+              <Option value="notUSD"> not United States dollar </Option>
+            </Select>
+          </Col>
+        </SelectsHorizontal>
+        <Col md={3}>
+          <SelectsVertical>
+            <Select name="country">
+              <Option value="English"> English </Option>
+              <Option value="notEnglish"> not English </Option>
+            </Select>
+            <Select name="country">
+              <Option value="USD">United States dollar</Option>
+              <Option value="notUSD"> not United States dollar </Option>
+            </Select>
+          </SelectsVertical>
         </Col>
-        <Col lg={1} />
-        <Col lg={3}>
-          <Section> Airbnb </Section>
-          <Point>
-            <Link href="/airbnb">Careers</Link>
-          </Point>
-          <Point>
-            <Link href="/airbnb">Press</Link>
-          </Point>
-          <Point>
-            <Link href="/airbnb">Policies</Link>
-          </Point>
-          <Point>
-            <Link href="/airbnb">Help</Link>
-          </Point>
-          <Link href="/airbnb">
-            <Point> Diversity & Belonging </Point>
-          </Link>
+        <Col md={1} />
+        <Col md={3}>
+          <Column>
+            <ColumnTitle> Airbnb </ColumnTitle>
+            <ColumnSection>
+              <Link href="/airbnb">Careers</Link>
+            </ColumnSection>
+            <ColumnSection>
+              <Link href="/airbnb">Press</Link>
+            </ColumnSection>
+            <ColumnSection>
+              <Link href="/airbnb">Policies</Link>
+            </ColumnSection>
+            <ColumnSection>
+              <Link href="/airbnb">Help</Link>
+            </ColumnSection>
+            <Link href="/airbnb">
+              <ColumnSection> Diversity & Belonging </ColumnSection>
+            </Link>
+          </Column>
         </Col>
-        <Col lg={3}>
-          <Section> Discover </Section>
-          <Point>
-            <Link href="/discover">Trust & Safety</Link>
-          </Point>
-          <Point>
-            <Link href="/discover">Travel Credits</Link>
-          </Point>
-          <Point>
-            <Link href="/discover">Gifts Cards</Link>
-          </Point>
-          <Point>
-            <Link href="/discover">Airbnb Citizen</Link>
-          </Point>
-          <Point>
-            <Link href="/discover">Business Travel</Link>
-          </Point>
-          <Point>
-            <Link href="/discover">Airbnbmag</Link>
-          </Point>
+        <Col md={3}>
+          <Column>
+            <ColumnTitle> Discover </ColumnTitle>
+            <ColumnSection>
+              <Link href="/discover">Trust & Safety</Link>
+            </ColumnSection>
+            <ColumnSection>
+              <Link href="/discover">Travel Credits</Link>
+            </ColumnSection>
+            <ColumnSection>
+              <Link href="/discover">Gifts Cards</Link>
+            </ColumnSection>
+            <ColumnSection>
+              <Link href="/discover">Airbnb Citizen</Link>
+            </ColumnSection>
+            <ColumnSection>
+              <Link href="/discover">Business Travel</Link>
+            </ColumnSection>
+            <ColumnSection>
+              <Link href="/discover">Airbnbmag</Link>
+            </ColumnSection>
+          </Column>
         </Col>
-        <Col lg={2}>
-          <Section> Hosting </Section>
-          <Point>
-            <Link href="/hosting">Why Host</Link>
-          </Point>
-          <Point>
-            <Link href="/hosting">Hospitality</Link>
-          </Point>
-          <Point>
-            <Link href="/hosting">Responsible Hosting</Link>
-          </Point>
-          <Point>
-            <Link href="/hosting">Community Center</Link>
-          </Point>
+        <Col md={2}>
+          <Column>
+            <ColumnTitle> Hosting </ColumnTitle>
+            <ColumnSection>
+              <Link href="/hosting">Why Host</Link>
+            </ColumnSection>
+            <ColumnSection>
+              <Link href="/hosting">Hospitality</Link>
+            </ColumnSection>
+            <ColumnSection>
+              <Link href="/hosting">Responsible Hosting</Link>
+            </ColumnSection>
+            <ColumnSection>
+              <Link href="/hosting">Community Center</Link>
+            </ColumnSection>
+          </Column>
         </Col>
       </Row>
-    </Block>
+    </FooterContent>
   );
 };
