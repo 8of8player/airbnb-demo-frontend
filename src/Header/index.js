@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
-import { Content, P, Image, Link, DivFlex } from "../styled";
+import { Content, P, Image, Link, Flexbox } from "../styled";
 import logo from "./logo.png";
 import search from "./search.png";
 import pageDown from "./pageDown.png";
@@ -36,7 +36,7 @@ const ContentBordered = Content.extend`
   border-bottom: 1px solid rgba(72, 72, 72, 0.3);
 `;
 
-const DivFlexMid = DivFlex.extend`
+const FlexboxMid = Flexbox.extend`
   align-items: center;
   width: 100%;
   padding-top: 16px;
@@ -56,7 +56,7 @@ const MenuLogo = styled.div`
   }
 `;
 
-const MenuMain = DivFlex.extend`
+const MenuMain = Flexbox.extend`
   justify-content: space-between;
   display: none;
 
@@ -76,7 +76,7 @@ export default () => {
   return (
     <ContentBordered>
       <Row>
-        <DivFlexMid>
+        <FlexboxMid>
           <Col xs={2} md={1}>
             <Link href="/home">
               <Image src={logo} />
@@ -107,7 +107,7 @@ export default () => {
               </Option>
             </MenuMain>
           </Col>
-        </DivFlexMid>
+        </FlexboxMid>
       </Row>
     </ContentBordered>
   );

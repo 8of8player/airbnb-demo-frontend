@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
-import { DivFlex, Content, Link } from "../styled";
+import { Flexbox, Content, Link } from "../styled";
 import pageDown from "./pageDown.png";
 
 const FooterContent = Content.extend`
@@ -67,12 +67,13 @@ const ColumnTitle = styled.p`
 
 const Option = styled.option``;
 
-const ColumnSection = styled.p`
+const Links = Link.extend`
   margin: 0;
   font-weight: 600;
   font-size: 12px;
   line-height: 14px;
   margin-bottom: 11px;
+  display: block;
 
   @media (min-width: 992px) {
     font-size: 15px;
@@ -81,7 +82,7 @@ const ColumnSection = styled.p`
   }
 `;
 
-const Column = styled.div`
+const Nav = styled.nav`
   display: none;
 
   @media (min-width: 768px) {
@@ -89,7 +90,7 @@ const Column = styled.div`
   }
 `;
 
-const SelectsHorizontal = DivFlex.extend`
+const SelectsHorizontal = Flexbox.extend`
   width: 100%;
 
   @media (min-width: 768px) {
@@ -117,70 +118,36 @@ export default () => {
         </SelectsHorizontal>
         <Col md={1} />
         <Col md={3}>
-          <Column>
+          <Nav>
             <ColumnTitle> Airbnb </ColumnTitle>
-            <ColumnSection>
-              <Link href="/airbnb">About us</Link>
-            </ColumnSection>
-            <ColumnSection>
-              <Link href="/airbnb">Careers</Link>
-            </ColumnSection>
-            <ColumnSection>
-              <Link href="/airbnb">Press</Link>
-            </ColumnSection>
-            <ColumnSection>
-              <Link href="/airbnb">Policies</Link>
-            </ColumnSection>
-            <ColumnSection>
-              <Link href="/airbnb">Help</Link>
-            </ColumnSection>
-            <Link href="/airbnb">
-              <ColumnSection> Diversity & Belonging </ColumnSection>
-            </Link>
-          </Column>
+            <Links href="/airbnb">About us</Links>
+            <Links href="/airbnb">Careers</Links>
+            <Links href="/airbnb">Press</Links>
+            <Links href="/airbnb">Policies</Links>
+            <Links href="/airbnb">Help</Links>
+            <Links href="/airbnb">Diversity & Belonging</Links>
+          </Nav>
         </Col>
         <Col md={3}>
-          <Column>
+          <Nav>
             <ColumnTitle> Discover </ColumnTitle>
-            <ColumnSection>
-              <Link href="/discover">Trust & Safety</Link>
-            </ColumnSection>
-            <ColumnSection>
-              <Link href="/discover">Travel Credits</Link>
-            </ColumnSection>
-            <ColumnSection>
-              <Link href="/discover">Gifts Cards</Link>
-            </ColumnSection>
-            <ColumnSection>
-              <Link href="/discover">Airbnb Citizen</Link>
-            </ColumnSection>
-            <ColumnSection>
-              <Link href="/discover">Business Travel</Link>
-            </ColumnSection>
-            <ColumnSection>
-              <Link href="/discover">Guidebooks </Link>
-            </ColumnSection>
-            <ColumnSection>
-              <Link href="/discover">Airbnbmag</Link>
-            </ColumnSection>
-          </Column>
+            <Links href="/discover">Trust & Safety</Links>
+            <Links href="/discover">Travel Credits</Links>
+            <Links href="/discover">Gifts Cards</Links>
+            <Links href="/discover">Airbnb Citizen</Links>
+            <Links href="/discover">Business Travel</Links>
+            <Links href="/discover">Guidebooks </Links>
+            <Links href="/discover">Airbnbmag</Links>
+          </Nav>
         </Col>
         <Col md={2}>
-          <Column>
+          <Nav>
             <ColumnTitle> Hosting </ColumnTitle>
-            <ColumnSection>
-              <Link href="/hosting">Why Host</Link>
-            </ColumnSection>
-            <ColumnSection>
-              <Link href="/hosting">Hospitality</Link>
-            </ColumnSection>
-            <ColumnSection>
-              <Link href="/hosting">Responsible Hosting</Link>
-            </ColumnSection>
-            <ColumnSection>
-              <Link href="/hosting">Community Center</Link>
-            </ColumnSection>
-          </Column>
+            <Links href="/hosting">Why Host</Links>
+            <Links href="/hosting">Hospitality</Links>
+            <Links href="/hosting">Responsible Hosting</Links>
+            <Links href="/hosting">Community Center</Links>
+          </Nav>
         </Col>
       </Row>
     </FooterContent>

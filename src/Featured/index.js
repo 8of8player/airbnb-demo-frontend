@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
 import {
-  DivFlex,
   Content,
   Caption,
   CaptionBox,

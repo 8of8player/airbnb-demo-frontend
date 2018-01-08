@@ -37,17 +37,17 @@ export const Content = styled.div`
   }
 `;
 
-export const DivFlex = styled.div`
+export const Flexbox = styled.div`
   display: flex;
 `;
 
-export const WrapperHorizont = DivFlex.extend`
+export const WrapperHorizont = Flexbox.extend`
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
 `;
 
-export const Fame = DivFlex.extend`
+export const Fame = Flexbox.extend`
   align-items: center;
   margin-top: 5px;
   color: #383838;
@@ -70,7 +70,7 @@ export const Caption = styled.h1`
   }
 `;
 
-export const CaptionBox = DivFlex.extend`
+export const CaptionBox = Flexbox.extend`
   justify-content: space-between;
   margin-bottom: 16px;
   align-items: flex-end;

@@ -1,7 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 // import { CircularBold, CircularBook, CircularLight } from "../styled";
-import { Image, DivFlex, P } from "../styled";
+import { Image, Flexbox, P } from "../styled";
 import arrowRight from "./pageRightLink.png";
 
 // const Descr = CircularBook.extend`
@@ -16,7 +15,7 @@ const Descr = P.extend`
   }
 `;
 
-const DivFlexMid = DivFlex.extend`
+const FlexboxMid = Flexbox.extend`
   align-items: center;
   margin-right: 7px;
 
@@ -31,9 +30,9 @@ const DivFlexMid = DivFlex.extend`
 
 export default () => {
   return (
-    <DivFlexMid>
+    <FlexboxMid>
       <Descr> See All </Descr>
       <Image src={arrowRight} />
-    </DivFlexMid>
+    </FlexboxMid>
   );
 };

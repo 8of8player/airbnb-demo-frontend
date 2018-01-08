@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
-import { DivFlex, Image, Link, P } from "../styled";
+import { Flexbox, Image, Link, P } from "../styled";
 import logo from "./logo.png";
 import facebook from "./facebook.svg";
 import twitter from "./twitter.svg";
@@ -24,7 +24,7 @@ const BottomContent = styled.div`
   }
 `;
 
-const Copyright = DivFlex.extend`
+const Copyright = Flexbox.extend`
   align-items: center;
 
   @media (min-width: 768px) {
@@ -32,7 +32,7 @@ const Copyright = DivFlex.extend`
   }
 `;
 
-const RulesAndShare = DivFlex.extend`
+const RulesAndShare = Flexbox.extend`
   align-items: center;
   margin-top: 11px;
 
@@ -64,7 +64,7 @@ const Rights = P.extend`
   }
 `;
 
-const Rule = P.extend`
+const Links = Link.extend`
   font-weight: 600;
   font-size: 12px;
   line-height: 14px;
@@ -103,15 +103,9 @@ export default () => {
         </Col>
         <Col xs={12} md={5} lg={4}>
           <RulesAndShare>
-            <Rule>
-              <Link href="/terms">Terms</Link>
-            </Rule>
-            <Rule>
-              <Link href="/privacy">Privacy</Link>
-            </Rule>
-            <Rule>
-              <Link href="/sitemap">Site map</Link>
-            </Rule>
+            <Links href="/terms">Terms</Links>
+            <Links href="/privacy">Privacy</Links>
+            <Links href="/sitemap">Site map</Links>
             <Link href="/facebook">
               <ImageBottom src={facebook} />
             </Link>
