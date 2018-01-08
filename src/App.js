@@ -1,18 +1,41 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import styled from "styled-components";
+import Header from "./Header/";
+import Explore from "./Explore";
+import Experiences from "./Experiences";
+import Homes from "./Homes";
+import Popular from "./Popular";
+import Featured from "./Featured";
+import Footer from "./Footer";
+import Bottom from "./Bottom";
+
+const Container = styled.div`
+  width: 320px;
+
+  @media (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media (min-width: 992px) {
+    width: 992px;
+  }
+`;
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Container>
+          <Header />
+          <Explore />
+          <Experiences />
+          <Homes />
+          <Popular />
+          <Featured />
+          <Footer />
+          <Bottom />
+        </Container>
       </div>
     );
   }
